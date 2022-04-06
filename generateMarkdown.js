@@ -35,37 +35,42 @@ function generateMarkdown(data) {return `  ## ${data.title}
   ${data.description}
 
 
+  
   ##Table of Contents
   - [Installation](#installation)
-  - [Usage](#usage)
   - [Features](#features)
   - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
 
 
+
   ## Installation
   ${data.installation}
   
 
-  ## Usage
-  ${data.usage}
 
 
   ## Features
   ${data.features}
 
 
+
+
   ## Credits
   ${data.credits}
+
+
 
 
   ## License
   ${renderLicenseBadge(data.license)}
   
 
+
+
   ## Questions
-  Any additional questions please reach out at https://github.com/bcorporal
+  Any additional questions please reach out at https://github.com/${data.github}
   [Click here to Email me](mailto:${data.email})`;
   
 }

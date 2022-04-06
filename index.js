@@ -48,7 +48,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter a link to your github profile.',
+        message: 'Enter your github profile username.',
         name: 'github',
     },
     {
@@ -75,12 +75,14 @@ const questions = [
 
 function init() {
     inquirer.prompt(questions)
-    .then((inquirerAnswers) => {
+    .then((data) => {
     console.log("---Generating---README---File---");
-    writeToFile("./utils/README.md", generateMarkdown({ ...inquirerAnswers }));
+    
+    const filename = `${data.title.toLowerCase().split(' ').join('')}.json`;
+    
+    writeToFile("./utils/README.md", generateMarkdown({ ...data }));
     })
 }
-
 
 // Function call to initialize app
 init();
