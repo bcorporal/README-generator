@@ -1,18 +1,17 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
-
+const generateMarkdown = require('./generateMarkdown')
 
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Readme Title',
+        message: 'Enter a title for this Readme file.',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a short description explaining the what, why, and how of your project.',
+        message: 'Provide a short description explaining your project.',
     },
     {
         type: 'input',
@@ -31,7 +30,7 @@ const questions = [
     },
     {
         type: 'checkbox',
-        name: 'language',
+        name: 'languages',
         message: 'What language did you include in your app?',
         choices: ['HTML', 'Javascript', 'Python', 'C', 'Java'],
     },
@@ -53,6 +52,7 @@ const questions = [
     },
 ];
  
+
     function writeToFile(fileName, data) {
         fs.writeFile(fileName, data, err => {
             if (err) {
@@ -62,4 +62,19 @@ const questions = [
         }
     });
 }
-    const writeFileAsync = util.promisify(writeToFile);
+
+
+
+// TODO: Create a function to initialize app
+
+function init() {
+    inquirer.prompt(questions)
+    .then((inquirerAnswers) => {
+    console.log("Generating---");
+    writeToFile("./dist/README.md", generateMarkdown({ ...inquirerAnswers }));
+    })
+}
+
+
+// Function call to initialize app
+init();
