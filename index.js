@@ -7,7 +7,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of you project?',
+        message: 'Enter the title of you project.',
     },
     {
         type: 'input',
@@ -16,8 +16,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'features',
-        message: 'What are some key features?',
+        name: 'installation',
+        message: 'How do you install this project?',
     },
     {
         type: 'input',
@@ -26,18 +26,18 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installation',
-        message: 'How do you install this project?',
+        name: 'features',
+        message: 'What are some key features?',
     },
     {
         type: 'checkbox',
         name: 'languages',
-        message: 'What language did are used in this app?',
+        message: 'What language(s) are used in this app?',
         choices: ['HTML', 'Javascript', 'Python', 'C', 'Java'],
     },
     {
         type: 'input',
-        name: 'credits',
+        name: 'contributions',
         message: 'List collaborators, if any, with links to their GitHub profiles.',
     },
     {
@@ -45,6 +45,11 @@ const questions = [
         message: 'Chose a license for your product.',
         name: 'license',
         choices: ['MIT', 'GNU', 'None'],
+    },
+    {
+        type: 'input',
+        message: 'Test Instructions',
+        name: 'tests',
     },
     {
         type: 'input',

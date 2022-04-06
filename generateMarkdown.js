@@ -38,17 +38,26 @@ function generateMarkdown(data) {return `  ## ${data.title}
   
   ##Table of Contents
   - [Installation](#installation)
+  - [Instructions](#instructions)
   - [Features](#features)
-  - [Credits](#credits)
+  - [Languages](#languages)
+  - [Contributions](#contributions)
   - [License](#license)
+  - [Tests](#tests)
   - [Questions](#questions)
 
 
 
   ## Installation
   ${data.installation}
-  
 
+
+
+
+  ## Instructions
+  ${data.instructions}
+
+  
 
 
   ## Features
@@ -56,16 +65,27 @@ function generateMarkdown(data) {return `  ## ${data.title}
 
 
 
+  ## Language(s)
+  ${data.languages}
 
-  ## Credits
-  ${data.credits}
+
+
+
+  ## Contributions
+  ${data.contributions}
 
 
 
 
   ## License
   ${renderLicenseBadge(data.license)}
-  
+
+
+
+
+  ## Tests
+  ${data.tests}
+
 
 
 
