@@ -50,6 +50,11 @@ const questions = [
         message: 'Enter a link to your github profile.',
         name: 'github',
     },
+    {
+        type: 'input',
+        message: 'Enter your email',
+        name: 'email',
+    },
 ];
  
 
@@ -71,7 +76,7 @@ function init() {
     inquirer.prompt(questions)
     .then((inquirerAnswers) => {
     console.log("Generating---");
-    writeToFile("./dist/README.md", generateMarkdown({ ...inquirerAnswers }));
+    writeToFile("./utils/README.md", generateMarkdown({ ...inquirerAnswers }));
     })
 }
 
