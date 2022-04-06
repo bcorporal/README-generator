@@ -2,26 +2,22 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown')
 
+// questions to answer when generating readme
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Enter a title for this Readme file.',
+        message: 'What is the title of you project?',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a short description explaining your project.',
+        message: 'Provide a short description of your project.',
     },
     {
         type: 'input',
-        name: 'motivation',
-        message: 'Why did you build this project?',
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'What are the steps required to install your project?',
+        name: 'features',
+        message: 'What are some key features?',
     },
     {
         type: 'input',
@@ -29,21 +25,26 @@ const questions = [
         message: 'Provide instructions and examples for use.',
     },
     {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install this project?',
+    },
+    {
         type: 'checkbox',
         name: 'languages',
-        message: 'What language did you include in your app?',
+        message: 'What language did are used in this app?',
         choices: ['HTML', 'Javascript', 'Python', 'C', 'Java'],
     },
     {
         type: 'input',
         name: 'credits',
-        message: 'List your collaborators, if any, with links to their GitHub profiles.',
+        message: 'List collaborators, if any, with links to their GitHub profiles.',
     },
     {
         type: 'checkbox',
         message: 'Chose a license for your product.',
         name: 'license',
-        choices: ['Creative Commons', 'MIT', 'GNU', 'MySQL'],
+        choices: ['Creative Commons', 'MIT', 'GNU', 'None'],
     },
     {
         type: 'input',
@@ -57,7 +58,7 @@ const questions = [
     },
 ];
  
-
+// Function to write README file
     function writeToFile(fileName, data) {
         fs.writeFile(fileName, data, err => {
             if (err) {
