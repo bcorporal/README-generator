@@ -4,7 +4,8 @@ function renderLicenseBadge(license) {
   if (license === "None") {
     return "";
   } 
-    return `[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)`;
+   return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})
+   `
   }
 
 // TODO: Create a function that returns the license link
@@ -12,23 +13,15 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license === "None") {
     return "";
-  } else if (license === "Creative Commons") {
-    return "https://creativecommons.org/licenses/by/4.0/";
-  } else if (license === "MIT") {
-    return "https://opensource.org/licenses/MIT";
-  } else if (license === "GNU") {
-    return "https://www.gnu.org/licenses/gpl-3.0";
-  }
+  } 
+  return `- [License](#license)`;
 }
 
 function renderLicenseSection(license) {
 if (license === "None") {
-  return ""; 
+  return "No License"; 
 }
-    return `
-    ## License
-    ${renderLicenseBadge(license)}
-    This project is licensed under a ${license} license.
+  return `This project is licensed under a ${license} license.
     For more information ${renderLicenseLink(license)}
     `;
   }
@@ -73,7 +66,7 @@ function generateMarkdown(data) {return `  ## ${data.title}
 
   ## Questions
   Any additional questions please reach out at https://github.com/bcorporal
-  [Email me](mailto:${data.email})`;
+  [Click here to Email me](mailto:${data.email})`;
   
 }
 

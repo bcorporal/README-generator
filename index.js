@@ -44,7 +44,7 @@ const questions = [
         type: 'checkbox',
         message: 'Chose a license for your product.',
         name: 'license',
-        choices: ['Creative Commons', 'MIT', 'GNU', 'None'],
+        choices: ['MIT', 'GNU', 'None'],
     },
     {
         type: 'input',
