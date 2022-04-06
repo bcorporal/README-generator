@@ -1,8 +1,8 @@
-  ## d
+  ## abc
 
   
   ## Description
-  d
+  yes
 
 
   ##Table of Contents
@@ -15,7 +15,7 @@
 
 
   ## Installation
-  d
+  yes
   
 
   ## Usage
@@ -23,17 +23,17 @@
 
 
   ## Features
-  dv
+  yes
 
 
   ## Credits
-   
+  yes
 
 
   ## License
-  undefined
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
   
 
   ## Questions
   Any additional questions please reach out at https://github.com/bcorporal
-  [Email Me](mailto:bc#gmil)
+  [Email me](mailto:bcorporal@gmail.com)
