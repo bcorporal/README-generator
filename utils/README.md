@@ -31,10 +31,10 @@
 
 
   ## License
-  [![License](https://img.shields.io/badge/License--blue.svg)](https://opensource.org/licenses/)
+  [![License](https://img.shields.io/badge/License-None-blue.svg)](https://opensource.org/licenses/None)
    
   
 
   ## Questions
   Any additional questions please reach out at https://github.com/bcorporal
-  [Click here to Email me](mailto:)
+  [Click here to Email me](mailto:bcorporal@gmail.com)
